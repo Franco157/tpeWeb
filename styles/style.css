@@ -3,12 +3,16 @@
     padding: 0px;
     border: 0px;
 }
-
+body {
+    background-image: url("../styles/img/fondoNaranja.jpg");
+    
+}
 header {
     display: flex;
     font-style: oblique;
     align-items: flex-end;
     color: rgb(49, 13, 3);
+    background-color: rgb(255, 234, 234);
 }
 
 .head-img {
@@ -55,15 +59,6 @@ header {
 }
 
 /* SECTION */
-
-section {
-    background: #f12711;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #f5af19, #f12711);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #f5af19, #f12711);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 .section_noticias div {
     padding: 0%;
@@ -112,46 +107,33 @@ section .carousel-inner {
 .velas-icon {
     background-image: url("./img/Velas.png");
 }
-
 .bombitas-icon {
     background-image: url("./img/Bombitas.png");
 }
-
 .sahumerios-icon {
     background-image: url("./img/Sahumerios.png");
 }
-
 .section_productos {
     margin-top: 1px;
 }
-
-
-
 .container-imagenes h2 {
     background-color: rgba(255, 255, 255, 0.356);
     font-style: oblique;
 }
-
 .container-imagenes h5 {
-
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
-
 .container-imagenes ol {
     background-color: rgba(7, 0, 14, 0.521);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 .primer-columna,
 .segunda-columna,
 .tercera-columna {
     /* width: 30%; */
     margin-top: 4%;
     margin-bottom: 3%;
-
 }
-
 .sahumerios-icon,
 .velas-icon,
 .carbones-icon,
@@ -163,15 +145,11 @@ section .carousel-inner {
     justify-content: center;
     align-items: center;
     height: 150px;
-
 }
-
 .container-imagenes ol li {
     color: white;
     font-size: 80%;
-
 }
-
 
 /*Contactanos*/
 .contactanos {
@@ -195,6 +173,23 @@ section .carousel-inner {
     border: solid 2px;
     width: 20%;
     background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #753206;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(184, 91, 48);
+}
+#botonEnviar:hover {
+    background-color: rgba(148, 49, 19, 0.562);
+}
+#botonEnviar:active {
+    background-color: #3f0c0c;
+    box-shadow: 0 5px rgb(114, 58, 36);
+    transform: translateY(4px);
 }
 
 /* @Media RESPONSIVE */
