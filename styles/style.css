@@ -14,7 +14,7 @@ header {
     color: rgb(49, 13, 3);
     background-color: rgb(255, 234, 234);
 }
-
+/*Head*/
 .head-img {
     width: 15%;
     display: flex;
@@ -85,14 +85,13 @@ header {
 
 /* FOOTER */
 footer {
-    padding: 0%;
-    margin: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(68, 16, 2);
     color: white;
     font-style: oblique;
+    margin-top: 3%;
 }
 
 
@@ -188,6 +187,7 @@ section .carousel-inner {
     background-color: #753206;
     border-radius: 15px;
     box-shadow: 0 9px rgb(184, 91, 48);
+
 }
 #botonEnviar:hover {
     background-color: rgba(148, 49, 19, 0.562);
@@ -206,6 +206,9 @@ table tr th,td {
 table th {
     text-decoration: underline;
 }
+#tablaEnvios {
+    width: 100%;
+}
 #tablaEnvios tr td {
     background-color:rgba(6, 68, 104, 0.267);
     border: solid 1px;
@@ -220,6 +223,8 @@ table th {
 .tituloTabla {
     text-align: center;
 }
+
+
 
 
 /* @Media RESPONSIVE */
