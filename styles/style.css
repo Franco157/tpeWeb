@@ -152,15 +152,21 @@ section .carousel-inner {
 }
 
 /*Contactanos*/
+.formulario {
+    background-color: rgba(7, 0, 14, 0.281);
+}
 .contactanos {
     margin: 2%;
 }
 .contactanos form.name {
     display: flex;
+
 }
 .contactanos form input, .contactanos form textarea {
+    
     background-color: lightgray;
     border: solid 1px;
+
 }
 
 .formHead {
@@ -191,6 +197,30 @@ section .carousel-inner {
     box-shadow: 0 5px rgb(114, 58, 36);
     transform: translateY(4px);
 }
+
+
+/*Envios*/
+table tr th,td {
+    text-align: center;
+}
+table th {
+    text-decoration: underline;
+}
+#tablaEnvios tr td {
+    background-color:rgba(6, 68, 104, 0.267);
+    border: solid 1px;
+}
+#tablaEnvios th {
+    background-color:rgba(6, 68, 104, 0.418);
+}
+.colEnvios{
+    text-align: left;
+}
+
+.tituloTabla {
+    text-align: center;
+}
+
 
 /* @Media RESPONSIVE */
 /* Para pantallas menores a 600px se esconde el navbar excepto el boton para mostrar el menu */
