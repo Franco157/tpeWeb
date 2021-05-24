@@ -54,7 +54,9 @@
         </a>
       </div>
     </nav>
-    <section>
+    
+    <div class="container_productos" >
+    <section class="carrousel_seccion_productos">
       <div
         id="carouselExampleIndicators"
         class="carousel slide"
@@ -66,6 +68,7 @@
             data-slide-to="0"
             class="active"
           ></li>
+          
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
@@ -73,7 +76,7 @@
           <div class="carousel-item active">
             <img
               class="d-block w-100"
-              src="../styles/img/Sahumerios.png"
+              src="../styles/img/carrousel1.jpg"
               alt="First slide"
             />
             <div class="carousel-caption">
@@ -85,7 +88,7 @@
           <div class="carousel-item">
             <img
               class="d-block w-100"
-              src="../styles/img/Velas2.png"
+              src="../styles/img/carrousel2.jpg"
               alt="Second slide"
             />
             <div class="carousel-caption">
@@ -96,7 +99,7 @@
           <div class="carousel-item">
             <img
               class="d-block w-100"
-              src="../styles/img/Bombitas2.png"
+              src="../styles/img/carrousel3.jpg"
               alt="Third slide"
             />
             <div class="carousel-caption">
@@ -125,52 +128,71 @@
         </a>
       </div>
     </section>
-    <section class="section_productos">
+    
+    <section class="mercaderia_seccion_productos">
       <div class="container-imagenes">
         <div class="primer-columna">
           <div class="sahumerios-icon">
             <h2>Sahumerios</h2>
           </div>
-          <h5><u> Podés elegir de: </u></h5>
-          <ol>
-            <li>Limon</li>
-            <li>Lavanda</li>
-            <li>Coco</li>
-            <li>Frutal</li>
-          </ol>
+          <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Podes elegir de:
+            </button>
+            <ul class="dropdown-menu">
+           <li> limon</li>
+           <li> lavanda</li>
+           <li> coco</li>
+           <li> frutal</li>
+            </ul>
+          </div>
         </div>
         <div class="segunda-columna">
           <div class="velas-icon">
             <h2>Velas</h2>
           </div>
-          <h5><u>Podés elegir de:</u></h5>
-          <ol>
-            <li>Vainilla</li>
-            <li>Coco y jengibre</li>
-            <li>Lavanda y melon</li>
-          </ol>
+          <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Podes elegir de:
+            </button>
+            <ul class="dropdown-menu">
+           <li>Vainilla</li>
+           <li>Coco y jengibre</li>
+           <li>Lavanda y melon</li>
+            </ul>
+          </div>
         </div>
         <div class="tercera-columna">
           <div class="bombitas-icon">
             <h2>Bombitas</h2>
           </div>
-          <h5><u>Podés elegir de:</u></h5>
-          <ol>
-            <li>Indias</li>
-            <li>Mix frutal</li>
-          </ol>
+          <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Podes elegir de:
+            </button>
+            <ul class="dropdown-menu">
+           <li>Indias</li>
+           <li>Mix frutal</li>  
+            </ul>
+          </div>
         </div> 
       </div>
-  </section>
-    <footer>
+  </section> 
+</div>
+
+
+  
+  
+  <footer>
       Seguinos en
       <a href="http://instagram.com/geaaromas">
-        <img src="../styles/img/797afe1351677d0ad8787224e6a5be2a.png" alt="" />
+        <img src="../styles/img/logoInstagram.png" alt="">
       </a>
       "Gea Aromas"
-    </footer>
-    <script type="text/javascript" src="../main.js"></script>
-    <script
+  </footer>
+    
+  <script type="text/javascript" src="../main.js"></script>
+  <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"

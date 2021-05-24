@@ -13,6 +13,7 @@ header {
     align-items: flex-end;
     color: rgb(49, 13, 3);
     background-color: rgb(255, 234, 234);
+
 }
 /*Head*/
 .head-img {
@@ -28,8 +29,9 @@ header {
 
 /* fondo negro*/
 .topnav {
-    background-color: rgb(68, 16, 2);
+    background-color:  rgba(110, 1, 65, 0.884);
     overflow: hidden;
+  
 }
 
 /* estilo para links internos */
@@ -43,15 +45,32 @@ header {
     font-size: 17px;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+
+
+
+
 
 .topnav a.active {
-    background-color: #532601;
+ background-color:  rgba(110, 1, 65, 0.884);
     color: white;
 }
+
+
+
+/* SECCION CARROUSEL */
+
+.imagenes_responsive {display: none;}
+
+.carrousel .carousel-item {
+    width: 90%;
+    margin-left: 4.5%;
+    margin-bottom: 20%; }
+
+    
+
+
+
+
 
 /* escondo boton de menu */
 .topnav .icon {
@@ -61,11 +80,11 @@ header {
 /* SECTION */
 
 .section_noticias div {
-    padding: 0%;
-    margin: 0%;
+    padding: 1%;
+    margin: 2%;
     border-style: groove;
     border-color: black;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.562); 
 }
 
 .section_noticias div h4{
@@ -83,25 +102,40 @@ header {
 }
 
 
+
 /* FOOTER */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(68, 16, 2);
     color: white;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.87), rgb(9, 78, 58) );
     font-style: oblique;
     margin-top: 3%;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
 }
 
 
 /* PRODUCTOS  */
-.carousel-inner{
-    height: 380px;
-}
-section .carousel-inner {
-    height: 100%;
-}
+
+.dropdown-menu { background-color: rgba(0, 0, 0, 0.911); color: white; text-align:center;}
+
+.mercaderia_seccion_productos { margin-bottom: 20%; margin-top: 8%;}
+
+.mercaderia_seccion_productos button { 
+        background-color:rgba(110, 1, 65, 0.884);
+        
+    }
+
+.mercaderia_seccion_productos .btn-group{ margin-top: 2%; }
+
+.btn-group-vertical>.btn:hover, .btn-group>.btn:hover {background-color:rgba(110, 1, 65, 0.884) }
+
+
+
 
 .velas-icon {
     background-image: url("./img/Velas.png");
@@ -114,6 +148,7 @@ section .carousel-inner {
 }
 .section_productos {
     margin-top: 1px;
+    margin-bottom: 25%;
 }
 .container-imagenes h2 {
     background-color: rgba(255, 255, 255, 0.356);
@@ -150,12 +185,21 @@ section .carousel-inner {
     font-size: 80%;
 }
 
+
+
+
 /*Contactanos*/
 .formulario {
-    background-color: rgba(7, 0, 14, 0.281);
+    background-color: rgba(14, 0, 14, 0.205);
+    width: 95%; 
+    margin:2%;
+    margin-top: 9%;
+    padding: 1%;
+    border: solid 2px black;
 }
 .contactanos {
     margin: 2%;
+    margin-top: 0%;
 }
 .contactanos form.name {
     display: flex;
@@ -172,6 +216,7 @@ section .carousel-inner {
     text-decoration: underline;
     font-style: italic;
     margin: 2%;
+    margin-bottom: 0%;
 }
 #botonEnviar {
     border-radius: 50%;
@@ -187,6 +232,7 @@ section .carousel-inner {
     background-color: #753206;
     border-radius: 15px;
     box-shadow: 0 9px rgb(184, 91, 48);
+    margin-top: 3%;
 
 }
 #botonEnviar:hover {
@@ -223,11 +269,13 @@ table th {
 .tituloTabla {
     text-align: center;
 }
+.section_envios { margin-bottom: 25%;}
 
 
 
 
 /* @Media RESPONSIVE */
+
 /* Para pantallas menores a 600px se esconde el navbar excepto el boton para mostrar el menu */
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {
@@ -257,4 +305,81 @@ table th {
         display: block;
         text-align: left;
     }
+
+
+}
+
+@media only screen and (min-width:600px) {
+
+/* carrousel seccion home */
+
+    .carousel { margin-bottom: 2%;}
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: linear-gradient(to bottom, rgba(20, 20, 20, 0.87), rgb(9, 78, 58) );
+        font-style: oblique;
+        margin-top: 2%;
+        position:relative;
+        height: 80px;
+        width: 100%;
+        
+    }
+.carrousel .carousel  { display: none;  }
+                        
+
+.imagenes_responsive {
+       
+                            display: flex;
+                            justify-content: space-around;
+                            background-color: rgba(94, 5, 79, 0.712);       
+                            border-style: double;
+                            border-color:  black ;
+                            border-width: thick;
+                            width: 99,5%;   
+                            margin-top: 1%;
+                            margin-bottom:0%;
+                            margin-left: 1%;
+                            margin-right: 1%;
+                                       
+                                    }
+.imagenes_responsive img 
+                            {margin-top: 2%;
+                             margin-bottom: 2%;   
+                             border-color: black;
+                            }
+
+
+/* carrousel seccion productos */
+
+.carrousel_seccion_productos { width: 60%;   display: grid; grid-area: carrousel; margin-left: 10%;}
+
+
+
+.sahumerios-icon, .bombitas-icon, .velas-icon { height: 150px}
+
+.mercaderia_seccion_productos {width:70%  ;display: grid; margin: 0; grid-area: producto; margin-left: 10%;}
+
+.container_productos { display: grid;   
+                       grid-template-columns: 50% 50% ;
+                       grid-template-rows: auto;
+                       grid-template-areas: " producto  . "
+                                            " producto carrousel "
+                                            " producto . " ;  
+                                          }
+
+.container-imagenes {  margin-left: 15%; margin-top: 4%; }
+
+/* CONTACTANOS */
+
+.formulario {margin-top: 3%;}
+
+/* ENVIOS */
+
+.section_envios { margin-bottom: 3%;}
+
+
 }

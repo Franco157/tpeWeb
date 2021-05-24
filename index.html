@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
+
 <body>
+
     <header>
         <div class="head-img" >
             <img src="./styles/img/Captura de pantalla (4).png" alt="">
@@ -36,29 +38,42 @@
     </nav>
 
     <section>
+     
       <div class="section_noticias">
         
-        <div>
-            <h4>Quienes somos:</h4>
-            <p class="descripcion"> GEA es un proyecto autogestivo que surge después de un reset obligatorio, de tener que empezar de cero con algo nuevo ya que todo lo anterior a marzo 2020 se había esfumado en una abrir y cerrar de ojos. Surge ante la necesidad, pero también ante la inmensa curiosidad que habita en una mujer inquieta.
-            </p>
+        <div class="card" style="width: 95%;">
+          <div class="card-body">
+            <h5 class="card-title">Quienes somos:</h5>
+            <p class="card-text">GEA es un proyecto autogestivo que surge después de un reset obligatorio, de tener que empezar de cero con algo nuevo ya que todo lo anterior a marzo 2020 se había esfumado en una abrir y cerrar de ojos. Surge ante la necesidad, pero también ante la inmensa curiosidad que habita en una mujer inquieta.</p>
+            <a href="#" class="card-link">Contactanos</a>
+          </div>
         </div>
-        <div>
-          <h4>Nuestros productos:</h4>
-          <p class="descripcion">Todos los productos que podés encontrar en esta tienda son artesanales, tanto los de producción propia como los de terceros. Son amigables con nuestro planeta, de origen natural y de materias primas de recolección sustentable. Asimismo, todo el packing es reciclable y los envases retornables y reutilizables, de manera que no generamos basura. 
-        </p>
+        
+         
+        <div class="card" style="width: 95%;">
+          <div class="card-body">
+            <h5 class="card-title">Nuestros productos:</h5>
+            <p class="card-text">Todos los productos que podés encontrar en esta tienda son artesanales, tanto los de producción propia como los de terceros. Son amigables con nuestro planeta, de origen natural y de materias primas de recolección sustentable. Asimismo, todo el packing es reciclable y los envases retornables y reutilizables, de manera que no generamos basura. </p>
+            <a href="#" class="card-link">Nuestros productos</a>
+          </div>
         </div>
+        
+        
     </section>
 
+ <section class="carrousel">
+
+    <div class="imagenes_responsive">
+       <img src="./styles/img/cuandoSahumar2.1.png" alt="" width="30%" >  
+       <img src="./styles/img/comoSahumar1.2.png" alt="" width="30%">   
+       <img src="./styles/img/comoSahumar2.3.png" alt="" width="30%">      
+    </div> 
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+      
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="./styles/img/comoSahumar1.2.png" alt="First slide">
+          <img class="d-block w-100 " src="./styles/img/comoSahumar1.2.png" alt="First slide">
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="./styles/img/comoSahumar2.3.png" alt="Second slide">
@@ -76,11 +91,12 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+  </section>
 
     <footer>
       Seguinos en
       <a href="http://instagram.com/geaaromas">
-        <img src="styles/img/797afe1351677d0ad8787224e6a5be2a.png" alt="">
+        <img src="./styles/img/logoInstagram.png" alt="">
       </a>
       "Gea Aromas"
     </footer>
@@ -90,4 +106,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
