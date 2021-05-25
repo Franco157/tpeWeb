@@ -26,6 +26,7 @@ header {
     width: 17%;
     display: flex;
 }
+
 .head-img img {
     width: 100%;
 }
@@ -51,10 +52,6 @@ header {
 }
 
 
-
-
-
-
 .topnav a.active {
  background-color:  rgba(110, 1, 65, 0.884);
     color: white;
@@ -62,7 +59,7 @@ header {
 
 
 
-/* SECCION CARROUSEL */
+/* INDEX SECTION CARROUSEL */
 
 .imagenes_responsive {display: none;}
 
@@ -82,7 +79,7 @@ header {
     display: none;
 }
 
-/* SECTION */
+/* SECTION NOTICIAS*/
 
 .section_noticias div {
     padding: 1%;
@@ -126,6 +123,9 @@ footer {
 
 
 /* PRODUCTOS  */
+.carrousel_seccion_productos { display: none;}
+
+
 
 .dropdown-menu { background-color: rgba(0, 0, 0, 0.911); color: white; text-align:center;}
 
@@ -138,8 +138,9 @@ footer {
 
 .mercaderia_seccion_productos .btn-group{ margin-top: 2%; }
 
-.btn-group-vertical>.btn:hover, .btn-group>.btn:hover {background-color:rgba(110, 1, 65, 0.884) }
 
+
+.btn-group-vertical>.btn:hover, .btn-group>.btn:hover {background-color:rgba(110, 1, 65, 0.884) }
 
 
 
@@ -170,7 +171,7 @@ footer {
 .primer-columna,
 .segunda-columna,
 .tercera-columna {
-    /* width: 30%; */
+  
     margin-top: 4%;
     margin-bottom: 3%;
 }
@@ -194,7 +195,10 @@ footer {
 
 
 
-/*Contactanos*/
+/* CONTACTANOS */
+
+
+
 .formulario {
     background-color: rgba(14, 0, 14, 0.205);
     width: 95%; 
@@ -245,6 +249,7 @@ footer {
     border-radius: 15px;
     box-shadow: 0 9px rgb(184, 91, 48);
     margin-top: 3%;
+    margin-left: 7px;
 
 }
 #botonEnviar:hover {
@@ -323,10 +328,12 @@ table th {
 
 @media only screen and (min-width:600px) {
 
-
 /* HEADER */
 
-.head-img  { width: 7% }
+.head-img {
+    width: 8%;
+  
+}
 #titulo { font-size: 31px; margin-left: 15px;}
 
 /* carrousel seccion home */
@@ -374,7 +381,9 @@ table th {
 
 /* carrousel seccion productos */
 
-.carrousel_seccion_productos { width: 60%;   display: grid; grid-area: carrousel; margin-left: 10%;}
+.carrousel_seccion_productos_responsive { display: none;}
+
+.carrousel_seccion_productos { width: 58%;   display: grid; grid-area: carrousel; margin-left: 10%;}
 
 
 
@@ -401,4 +410,4 @@ table th {
 .section_envios { margin-bottom: 3%;}
 
 
-}
+} 
