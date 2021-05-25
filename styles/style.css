@@ -288,6 +288,12 @@ table th {
 }
 .section_envios { margin-bottom: 25%;}
 
+.formSucursales input {
+        background-color: lightgray;
+        border: solid 1px;
+    
+}
+
 
 
 
@@ -404,6 +410,9 @@ table th {
 /* CONTACTANOS */
 
 .formulario {margin-top: 3%;}
+#botonEnviar {
+    width: 100px;
+}
 
 /* ENVIOS */
 

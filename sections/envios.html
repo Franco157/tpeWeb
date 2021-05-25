@@ -45,7 +45,7 @@
         </a>
       </div>
     </nav>
-   
+
     <section class="section_envios">
       <h5 class="tituloTabla">Costos de envíos:</h5>
       <table id="tablaEnvios">
@@ -92,42 +92,63 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col"><u>Sucursales</u></th>
-            <th scope="col"><u>Ubicación</u></th>
+            <th scope="col"><u>Dirección</u></th>
             <th scope="col"><u>Horario</u></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><b>1</b></td>
-            <td class="tabla-ciudad">Buenos Aires</td>
-            <td>Cabildo 3550</td>
-            <td>8hs a 21hs</td>
-          </tr>
-          <tr>
-            <td><b>2</b></td>
-            <td class="tabla-ciudad">Salta</td>
-            <td>9 de julio 2342</td>
-            <td>8hs a 13:30hs y 17hs a 21:30hs</td>
-          </tr>
-          <tr>
-            <td><b>3</b></td>
-            <td class="tabla-ciudad">Bahia Blanca</td>
-            <td>Rivadavia 1151</td>
-            <td>8hs a 12hs y 16hs a 21hs</td>
-          </tr>
-        </tbody>
+        <tbody id="tablaSucursales"></tbody>
       </table>
-      <button type="button" class="botonAgregar" id="botonEnviar">Agregar</button>
+      <button type="button" class="btnEliminar" id="botonEnviar">Eliminar</button>
+
+      <div class="formulario">
+        <h5 class="formHead">Complete los datos:</h5>
+        <br />
+        <form class="formSucursales">
+          <div>
+            <label for="ciudad">Ciudad: </label>
+            <input
+              type="text"
+              placeholder="Ciudad"
+              maxlength="30"
+              name="ciudad"
+              id="formCiudad"
+            />
+          </div>
+          <div>
+            <label for="direccion">Dirección: </label>
+            <input
+              type="text"
+              placeholder="Dirección"
+              maxlength="30"
+              name="direccion"
+              id="formDireccion"
+            />
+          </div>
+          <div>
+            <label for="horario">Horario: </label>
+            <input
+              type="text"
+              placeholder="Horario"
+              maxlength="30"
+              name="horario"
+              id="formHorario"
+            />
+          </div>
+          <button type="button" class="btnAgregar" id="botonEnviar">Agregar</button>
+          <button type="button" class="btnAgregar3" id="botonEnviar">x 3</button>
+        </form>
+      </div>
     </section>
-    
-    
+
     <footer>
       Seguinos en
       <a href="http://instagram.com/geaaromas">
-        <img src="../styles/img/logoInstagram.png" alt="">
+        <img src="../styles/img/logoInstagram.png" alt="" />
       </a>
       "Gea Aromas"
     </footer>
+
+    <script type="text/javascript" src="../js/envios.js"></script>
     <script type="text/javascript" src="../main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
