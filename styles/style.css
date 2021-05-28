@@ -270,7 +270,8 @@ table th {
     text-decoration: underline;
 }
 #tablaEnvios {
-    width: 100%;
+    width: 95%;
+    margin-left: 2.5%
 }
 #tablaEnvios tr td {
     background-color:rgba(6, 68, 104, 0.267);
@@ -287,13 +288,14 @@ table th {
     text-align: center;
 }
 .section_envios { margin-bottom: 25%;}
+.section_envios h5 {margin-top: 10px;}
 
 .formSucursales input {
         background-color: lightgray;
-        border: solid 1px;
-    
-}
+        border: solid 1px; 
+        margin-bottom: 1%;}
 
+.formSucursales { margin-bottom: 3%;}
 
 
 
@@ -413,6 +415,15 @@ table th {
 #botonEnviar {
     width: 100px;
 }
+.formSucursales input {
+ 
+    margin-bottom: 5px; }
+
+.formSucursales { margin-bottom: 5px; }
+
+
+
+
 
 /* ENVIOS */
 
@@ -420,3 +431,18 @@ table th {
 
 
 } 
+
+@media screen and (min-width: 460px) { 
+
+/* PRODUCTOS */
+
+.primer-columna, .segunda-columna, .tercera-columna > div { 
+                        margin-left: 8%;
+                        width: 400px;            }
+
+
+
+
+
+
+}
