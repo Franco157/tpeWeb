@@ -97,10 +97,24 @@ function eliminarSucursal () {
  }
 
 function agregar3 () {
-  for (let i = 0; i < 3; i++) {
-    agregarSucursal();
-  }
+  if ((formCiudad.value != '') && (formDireccion.value != '') && (formHorario.value != '') ) {
+   
+   
+    let suc = 
+        {
+          id: sucursales.length,
+          nombre: formCiudad.value,
+          direccion: formDireccion.value,
+          horario: formHorario.value,
+        }
+        sucursales.push(suc);
+        sucursales.push (suc);
+        sucursales.push (suc);
+
         tablasucursales.innerHTML = '';
         cargarTabla();
         vaciarInputs();
+  } else {
+    alert("Completa los campos");
+  }
   }
