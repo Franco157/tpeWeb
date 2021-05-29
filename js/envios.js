@@ -24,7 +24,7 @@ let sucursalBsas = {
 };
 
 let sucursalSalta = {
-    id: 1,
+    id: 2,
     nombre: "Salta",
     direccion: "9 de julio 2342",
     horario: "8hs a 13hs - 17hs a 21hs",
@@ -32,17 +32,15 @@ let sucursalSalta = {
   };
 
 let sucursalBahia = {
-    id: 2,
+    id: 1,
     nombre: "Bahia Blanca",
     direccion: "Rivadavia 1151",
     horario: "8hs a 13hs - 17hs a 21hs",
   };
 
 
-let sucursales = [];
-sucursales.push(sucursalBsas);
-sucursales.push(sucursalBahia);
-sucursales.push(sucursalSalta);
+let sucursales = [sucursalBsas, sucursalBahia, sucursalSalta ];
+
 
 
 cargarTabla();
@@ -90,10 +88,13 @@ function vaciarInputs() {
 }
 
 function eliminarSucursal () {
-  sucursales = [];
-  tablasucursales.innerHTML = '';
-  cargarTabla();
-}
+ 
+  
+  if (sucursales.length > 3) 
+    {sucursales.pop () ;
+    tablasucursales.innerHTML = '';
+    cargarTabla(); }
+ }
 
 function agregar3 () {
   for (let i = 0; i < 3; i++) {
