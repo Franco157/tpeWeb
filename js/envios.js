@@ -24,7 +24,7 @@ let sucursalBsas = {
 };
 
 let sucursalSalta = {
-    id: 2,
+    id: 1,
     nombre: "Salta",
     direccion: "9 de julio 2342",
     horario: "8hs a 13hs - 17hs a 21hs",
@@ -32,15 +32,17 @@ let sucursalSalta = {
   };
 
 let sucursalBahia = {
-    id: 1,
+    id: 2,
     nombre: "Bahia Blanca",
     direccion: "Rivadavia 1151",
     horario: "8hs a 13hs - 17hs a 21hs",
   };
 
 
-let sucursales = [sucursalBsas, sucursalBahia, sucursalSalta ];
-
+let sucursales = [];
+sucursales.push(sucursalBsas);
+sucursales.push(sucursalBahia);
+sucursales.push(sucursalSalta);
 
 
 cargarTabla();
@@ -88,33 +90,18 @@ function vaciarInputs() {
 }
 
 function eliminarSucursal () {
- 
-  
-  if (sucursales.length > 3) 
-    {sucursales.pop () ;
-    tablasucursales.innerHTML = '';
-    cargarTabla(); }
- }
+  sucursales = [];
+  tablasucursales.innerHTML = '';
+  cargarTabla();
+}
 
-function agregar3 () {
-  if ((formCiudad.value != '') && (formDireccion.value != '') && (formHorario.value != '') ) {
    
-   
-    let suc = 
-        {
-          id: sucursales.length,
-          nombre: formCiudad.value,
-          direccion: formDireccion.value,
-          horario: formHorario.value,
-        }
-        sucursales.push(suc);
-        sucursales.push (suc);
-        sucursales.push (suc);
-
+ function agregar3 () {
+  for (let i = 0; i < 3; i++) {
+    agregarSucursal();
+  }
         tablasucursales.innerHTML = '';
         cargarTabla();
         vaciarInputs();
-  } else {
-    alert("Completa los campos");
   }
-  }
+
