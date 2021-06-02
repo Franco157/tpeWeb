@@ -1,101 +1,117 @@
-"use strict";
 
-var formCiudad = document.querySelector("#formCiudad");
-var formDireccion = document.querySelector("#formDireccion");
-var formHorario = document.querySelector("#formHorario");
-var tablasucursales = document.querySelector("#tablaSucursales");
+// OBJETOS JSON  
+
+class modelosSucursal { constructor (id, nombre, direccion, horario)
+          
+  {this.id= id
+  this.nombre=nombre
+  this.direccion= direccion 
+  this.horario= horario } }
+
+let sucursalBsAs= new modelosSucursal ("1","Buenos Aires","Cabildo 2850","10 a 20 hs")
+
+let sucursalBahia =  new modelosSucursal ("2","Bahia","9 de julio  1577"," 8:30 a 13 - 16 a 21 hs")
+
+let sucursalSalta= new modelosSucursal ("3","Salta","Moreno 269","9 a 20 hs")
+
+let sucursales = []
+
+sucursales.push (sucursalBsAs);
+sucursales.push (sucursalBahia);
+sucursales.push (sucursalSalta);
+
+//CARGAR TABLA
+
+function cargarTabla() {
+
+
+for (let i = 0; i < sucursales.length; i++) {
+const sucursal = sucursales[i];
+tablaSucursales.innerHTML += `<tr>
+<td><b>${sucursal.id } </b></td>
+<td>${sucursal.nombre}</td>
+<td>${sucursal.direccion}</td>
+<td>${sucursal.horario}</td>
+</tr>` ; 
+}
+}
+
+cargarTabla();
+
+// AGREGAR SUCURSAL 
 
 var btnAgregar = document.querySelector(".btnAgregar");
 btnAgregar.addEventListener("click", agregarSucursal);
 
-var btnAgregar3 = document.querySelector(".btnAgregar3");
-btnAgregar3.addEventListener("click", agregar3);
+function agregarSucursal () {
+if ((formCiudad.value != '') && (formDireccion.value != '') && (formHorario.value != '') ) {
+
+let sucursal_agregada= new modelosSucursal (sucursales.length + 1 ,formCiudad.value,formDireccion.value, formHorario.value)
+sucursales.push (sucursal_agregada);
+
+vaciarInputs ();
+tablaSucursales.innerHTML = ""
+cargarTabla ();
+
+
+} else {
+alert("Completa los campos");
+}
+
+}
+function vaciarInputs() {
+formCiudad.value = '';
+formDireccion.value = '';
+formHorario.value = '';
+}
+
+
+// ELIMINAR TODO
 
 var btnEliminar = document.querySelector(".btnEliminar");
 btnEliminar.addEventListener("click", eliminarSucursal);
 
 
 
-let sucursalBsas = {
-  id: 0,
-  nombre: "Buenos Aires",
-  direccion: "Cabildo 3550",
-  horario: "8hs a 20hs",
-};
-
-let sucursalSalta = {
-    id: 1,
-    nombre: "Salta",
-    direccion: "9 de julio 2342",
-    horario: "8hs a 13hs - 17hs a 21hs",
- 
-  };
-
-let sucursalBahia = {
-    id: 2,
-    nombre: "Bahia Blanca",
-    direccion: "Rivadavia 1151",
-    horario: "8hs a 13hs - 17hs a 21hs",
-  };
-
-
-let sucursales = [];
-sucursales.push(sucursalBsas);
-sucursales.push(sucursalBahia);
-sucursales.push(sucursalSalta);
-
-
-cargarTabla();
-
-
-function cargarTabla() {
-
-
-  for (let i = 0; i < sucursales.length; i++) {
-    const sucursal = sucursales[i];
-    tablasucursales.innerHTML += `<tr>
-    <td><b>${sucursal.id+1}</b></td>
-    <td>${sucursal.nombre}</td>
-    <td>${sucursal.direccion}</td>
-    <td>${sucursal.horario}</td>
-    </tr>` ; 
-  }
-}
-
-
-
-function agregarSucursal () {
-  if ((formCiudad.value != '') && (formDireccion.value != '') && (formHorario.value != '') ) {
-    let suc = 
-        {
-          id: sucursales.length,
-          nombre: formCiudad.value,
-          direccion: formDireccion.value,
-          horario: formHorario.value,
-        }
-        sucursales.push(suc);
-        tablasucursales.innerHTML = '';
-        cargarTabla();
-        vaciarInputs();
-  } else {
-    alert("Completa los campos");
-  }
-  
-}
-
-function vaciarInputs() {
-  formCiudad.value = '';
-  formDireccion.value = '';
-  formHorario.value = '';
-}
-
 function eliminarSucursal () {
-  sucursales = [];
-  tablasucursales.innerHTML = '';
-  cargarTabla();
+sucursales = [];
+tablaSucursales.innerHTML = '';
+
 }
 
-   
+
+
+// AGREGAR TRES
+
+
+var btnAgregar3 = document.querySelector(".btnAgregar3");
+btnAgregar3.addEventListener("click", agregar3);
+
+
+
+function agregar3 () { 
+
+if ((formCiudad.value != '') && (formDireccion.value != '') && (formHorario.value != '') ) {
+
+let sucursal_agregada3= new modelosSucursal (sucursales.length +1 ,formCiudad.value,formDireccion.value, formHorario.value)
+
+
+sucursales.push (sucursal_agregada3 );
+sucursales.push (sucursal_agregada3 );
+sucursales.push (sucursal_agregada3 );
+
+
+
+vaciarInputs ();
+tablaSucursales.innerHTML = ""
+cargarTabla ();
+
+} 
+}
+
+
+/*
+
  function agregar3 () {
   for (let i = 0; i < 3; i++) {
     agregarSucursal();
@@ -105,3 +121,5 @@ function eliminarSucursal () {
         vaciarInputs();
   }
 
+
+  */
