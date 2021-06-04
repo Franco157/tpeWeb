@@ -440,8 +440,9 @@ table th {
 
   /* CONTACTANOS */
 
-  .formulario {
+  .formulario { 
     margin-top: 3%;
+    width: 40%;
   }
   #botonEnviar {
     width: 100px;
