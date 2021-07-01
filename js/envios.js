@@ -8,13 +8,6 @@ btnAgregar.addEventListener("click", subirDatos);
 let btnAgregar3 = document.querySelector(".btnAgregar3");
 btnAgregar3.addEventListener("click", subirDatos);
 
-//let btnEliminar = document.querySelector(".btnEliminar");
-//btnEliminar.addEventListener("click", borrarSucursal);
-
-// falta crear boton editar
-
-//let btnEditar = document.querySelector(".btnEditar");
-//btnEditar.addEventListener("click", editarSucursal);
 
 // OBJETOS JSON
 
@@ -44,12 +37,15 @@ async function traerDatos() {
             <td>${sucursal.ciudad}</td>
             <td>${sucursal.direccion}</td>
             <td>${sucursal.horario}</td>
-            <td> <button data-id= '${sucursal.id}' > eliminar </button> </td>
-            <td>  <button> editar </button>  </td>
-        </tr>`; 
-        document.querySelectorAll ("button")
-            .forEach ( (button) => {button.addEventListener ("click", eliminarFila) } ) ; 
-       
+            <td class="botonesTabla"><button class="btnBoton btnEliminar" data-id='${sucursal.id}' > eliminar </button></td>
+            <td class="botonesTabla"><button class="btnBoton btnEditar" data-id='${sucursal.id}' > editar </button></td>
+        </tr>`;
+      document.querySelectorAll(".btnEliminar").forEach((button) => {
+        button.addEventListener("click", eliminarSucursal);
+      });
+      document.querySelectorAll(".btnEditar").forEach((button) => {
+        button.addEventListener("click", editarSucursal);
+      });
     }
   } catch (event) {
     console.log(event);
@@ -103,18 +99,8 @@ function vaciarInputs() {
 
 // ELIMINAR FILA
 
-function eliminarFila () { 
-  
-  let id = this.dataset.id; 
-  
-  console.log ("se va a eliminar la fila " + id  )}
-
-
-
-
-
-/*
-async function borrarSucursal() {
+async function eliminarSucursal() {
+  let id = this.dataset.id;
   try {
     let res = await fetch(`${url}/${id}`, {
       method: "DELETE",
@@ -122,11 +108,14 @@ async function borrarSucursal() {
   } catch (error) {
     console.log(error);
   }
-} */
+  traerDatos();
+}
 
 // MODIFICAR SUCURSAL
 
 async function editarSucursal() {
+  let id = this.dataset.id;
+
   if (
     formCiudad.value != "" &&
     formDireccion.value != "" &&

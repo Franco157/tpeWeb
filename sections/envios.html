@@ -46,9 +46,23 @@
       </div>
     </nav>
 
+
     <section class="section_envios">
+
+
+<div id="filtro">
+  <select  name=""  id="selectFiltro">
+    <option value="1">3 a 5</option>
+    <option value="2">5 a 7</option>
+    <option value="3">7 a 9</option>
+  </select>
+   <button id="btn-filtrar"> Filtrar por horario </button>
+</div>
+
+
+
       <h5 class="tituloTabla">Costos de envíos:</h5>
-      <table id="tablaEnvios">
+      <table  class="tablaFiltrada"  id="tablaEnvios">
         <tr>
           <th>Envíos</th>
           <th>Buenos Aires</th>
@@ -98,9 +112,7 @@
         </thead>
         <tbody id="tablaSucursales"></tbody>
       </table>
-      <button type="button" class="btnEliminar" id="botonEnviar">
-        Eliminar
-      </button>
+      
 
       <div class="formulario">
         <h5 class="formHead">Complete los datos:</h5>
@@ -154,6 +166,7 @@
       "Gea Aromas"
     </footer>
 
+    <script type="text/javascript" src="../js/filtro.js"></script>
     <script type="text/javascript" src="../js/envios.js"></script>
     <script type="text/javascript" src="../main.js"></script>
     <script
