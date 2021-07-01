@@ -2,7 +2,7 @@
 
 
 let busqueda = document.getElementById('buscar');
-let table = document.getElementById("tablaEnvios").tBodies[0];
+let table = document.querySelector("#tablaSucursales")
 
 buscaTabla = function(){
   texto = busqueda.value.toLowerCase();
