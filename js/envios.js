@@ -8,8 +8,8 @@ btnAgregar.addEventListener("click", subirDatos);
 let btnAgregar3 = document.querySelector(".btnAgregar3");
 btnAgregar3.addEventListener("click", subirDatos);
 
-let btnEliminar = document.querySelector(".btnEliminar");
-btnEliminar.addEventListener("click", borrarSucursal);
+//let btnEliminar = document.querySelector(".btnEliminar");
+//btnEliminar.addEventListener("click", borrarSucursal);
 
 // falta crear boton editar
 
@@ -40,10 +40,16 @@ async function traerDatos() {
     for (const sucursal of sucursales) {
       tabla.innerHTML += `<tr>
             <td>${sucursal.id}</td>
+             
             <td>${sucursal.ciudad}</td>
             <td>${sucursal.direccion}</td>
             <td>${sucursal.horario}</td>
-        </tr>`;
+            <td> <button data-id= '${sucursal.id}' > eliminar </button> </td>
+            <td>  <button> editar </button>  </td>
+        </tr>`; 
+        document.querySelectorAll ("button")
+            .forEach ( (button) => {button.addEventListener ("click", eliminarFila) } ) ; 
+       
     }
   } catch (event) {
     console.log(event);
@@ -95,8 +101,19 @@ function vaciarInputs() {
   formHorario.value = "";
 }
 
-// ELIMINAR SUCURSAL
+// ELIMINAR FILA
 
+function eliminarFila () { 
+  
+  let id = this.dataset.id; 
+  
+  console.log ("se va a eliminar la fila " + id  )}
+
+
+
+
+
+/*
 async function borrarSucursal() {
   try {
     let res = await fetch(`${url}/${id}`, {
@@ -105,7 +122,7 @@ async function borrarSucursal() {
   } catch (error) {
     console.log(error);
   }
-}
+} */
 
 // MODIFICAR SUCURSAL
 
