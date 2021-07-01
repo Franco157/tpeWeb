@@ -1,24 +1,42 @@
 
 
-const btnFiltrar = document.querySelector ("#btn-filtrar").addEventListener ("click", filtrarDatos)
 
+let busqueda = document.getElementById('buscar');
+let table = document.getElementById("tablaEnvios").tBodies[0];
 
+buscaTabla = function(){
+  texto = busqueda.value.toLowerCase();
+  var r=0;
+  while(row = table.rows[r++])
+  {
+    if ( row.innerText.toLowerCase().indexOf(texto) !== -1 )
+      row.style.display = null;
+    else
+      row.style.display = 'none';
+  }
+}
 
+busqueda.addEventListener('keyup', buscaTabla);
+
+/*
 async function filtrarDatos() {
     let tabla = document.querySelector("#tablaSucursales");
-    tabla.innerHTML = "";
+    
     try {
     
       let res = await fetch(url); // GET url
       let json = await res.json(); // texto json a objeto
       let sucursales = json;
-      let objetoAuxiliar ;  
+      let ciudad = this.dataset.ciudad;
 
-if (selectFiltro.value == 1 ) { console.log ("anda el uno")}
+
+if (selectFiltro.value == 1 ) { sucursales  }
 else if (selectFiltro.value==2 ) {console.log ("anda el dos")  }     
 else {console.log ("anda el tres")}             
 
   
+
+
       for (const sucursal of sucursales) {
         tabla.innerHTML += `<tr>
               <td>${sucursal.id}</td>
@@ -40,4 +58,4 @@ else {console.log ("anda el tres")}
     } catch (event) {
       console.log(event);
     }
-  }
+  }   */

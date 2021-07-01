@@ -37,7 +37,7 @@ async function traerDatos() {
             <td>${sucursal.ciudad}</td>
             <td>${sucursal.direccion}</td>
             <td>${sucursal.horario}</td>
-            <td class="botonesTabla"><button class="btnBoton btnEliminar" data-id='${sucursal.id}' > eliminar </button></td>
+            <td class="botonesTabla"><button class="btnBoton btnEliminar"  data-id='${sucursal.id}' > eliminar </button></td>
             <td class="botonesTabla"><button class="btnBoton btnEditar" data-id='${sucursal.id}' > editar </button></td>
         </tr>`;
       document.querySelectorAll(".btnEliminar").forEach((button) => {
